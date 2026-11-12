@@ -10,7 +10,7 @@ public class Ship
     private boolean horiz;
     private boolean[] isHit;
 
-    public Ship(int l, String[] n, int r, int c, boolean h)
+    public Ship(int l, String n, int r, int c, boolean h)
     {
         lenShip = l;
         name = n;
