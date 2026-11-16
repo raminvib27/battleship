@@ -5,6 +5,7 @@ public class Board
 {
     private String[][] squares;
 
+    // set up empty board
     public Board()
     {
         squares = new String[10][10];
@@ -17,6 +18,7 @@ public class Board
         }
     }
 
+    // show board
     public String toString()
     {
         String board = "";
@@ -38,6 +40,7 @@ public class Board
         return board;
     }
 
+    // place ship on board
     public boolean addShip(int row, int col, int len, boolean horizontal)
     {
         if (row < 0 || row >= 10 || col < 0 || col >= 10 || len <= 0 || len > 10)
@@ -79,6 +82,7 @@ public class Board
         return true;
     }
 
+    // find ships of a given length
     public boolean foundShip(int len)
     {
         if (len <= 0 || len > 10)
@@ -134,6 +138,7 @@ public class Board
         return false;
     }
 
+    // shoot at a square
     public int shoot(int row, int col)
     {
         if (row < 0 || row >= 10 || col < 0 || col >= 10)
@@ -153,6 +158,7 @@ public class Board
         return 2;
     }
 
+    // check for ships left
     public boolean gameOver()
     {
         for (int row = 0; row < 10; row++)

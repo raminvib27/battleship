@@ -7,6 +7,7 @@ public class GameBoard
     private Board guessesBoard;
     private Ship[] ships;
 
+    // set up boards and ships
     public GameBoard()
     {
         shipsBoard = new Board();
@@ -14,21 +15,25 @@ public class GameBoard
         ships = new Ship[5];
     }
 
+    // get ships board
     public Board getShipsBoard()
     {
         return shipsBoard;
     }
 
+    // get guesses board
     public Board getGuessesBoard()
     {
         return guessesBoard;
     }
 
+    // get ship by index
     public Ship getShip(int index)
     {
         return ships[index];
     }
 
+    // add ship to board
     public boolean addShip(Ship ship, int index)
     {
         if (ship == null || index < 0 || index >= ships.length || ships[index] != null)

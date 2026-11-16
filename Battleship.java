@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 public class Battleship
 {
+    // run game loop (i'm so advanced i used whlie (true))
     public static void main(String[] args)
     {
         Scanner input = new Scanner(System.in);
@@ -108,6 +109,7 @@ public class Battleship
         input.close();
     }
 
+    // read a number
     public static int readNumber(Scanner input)
     {
         while (input.hasNext() && !input.hasNextInt())

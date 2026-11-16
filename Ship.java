@@ -10,6 +10,7 @@ public class Ship
     private boolean horiz;
     private boolean[] isHit;
 
+    // set up ship
     public Ship(int l, String n, int r, int c, boolean h)
     {
         lenShip = l;
@@ -20,36 +21,43 @@ public class Ship
         isHit = new boolean[lenShip];
     }
 
+    // get ship length
     public int getLen()
     {
         return lenShip;
     }
 
+    // get ship name
     public String getName()
     {
         return name;
     }
 
+    // get starting row
     public int getRowPos()
     {
         return posRow;
     }
 
+    // get starting column
     public int getColPos()
     {
         return posCol;
     }
 
+    // get ship direction
     public boolean getHoriz()
     {
         return horiz;
     }
 
+    // check if part was hit
     public boolean getHealth(int index)
     {
         return isHit[index];
     }
 
+    // show ship information
     public String toString()
     {
         return ("Name: " + name + "\n Length: " + lenShip + "\n Coordinates: (" + posCol + ", " + posRow + ")\n Is horizontal: " + horiz);
