@@ -17,7 +17,7 @@ public class Ship
         posRow = r;
         posCol = c;
         horiz = h;
-        isHit[] = new boolean[lenShip];
+        isHit = new boolean[lenShip];
     }
 
     public int getLen()
@@ -52,6 +52,6 @@ public class Ship
 
     public String toString()
     {
-        return ("Name: " + name "\n Length: " + lenShip + "\n Coordinates: (" + posCol + ", " + posRow + "\n Is horizontal: " + horiz);
+        return ("Name: " + name + "\n Length: " + lenShip + "\n Coordinates: (" + posCol + ", " + posRow + ")\n Is horizontal: " + horiz);
     }
 }
