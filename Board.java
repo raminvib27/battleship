@@ -3,17 +3,17 @@
 
 public class Board
 {
-    private String[][] squares;
+    private char[][] squares;
 
     // set up empty board
     public Board()
     {
-        squares = new String[10][10];
+        squares = new char[10][10];
         for (int row = 0; row < 10; row++)
         {
             for (int col = 0; col < 10; col++)
             {
-                squares[row][col] = "-";
+                squares[row][col] = '-';
             }
         }
     }
@@ -63,7 +63,7 @@ public class Board
             {
                 r += i;
             }
-            if (!squares[r][c].equals("-"))
+            if (squares[r][c] != '-')
             {
                 return false;
             }
@@ -72,11 +72,11 @@ public class Board
         {
             if (horizontal)
             {
-                squares[row][col + i] = "b";
+                squares[row][col + i] = 'b';
             }
             else
             {
-                squares[row + i][col] = "b";
+                squares[row + i][col] = 'b';
             }
         }
         return true;
@@ -94,7 +94,7 @@ public class Board
             int count = 0;
             for (int col = 0; col < 10; col++)
             {
-                if (squares[row][col].equals("b"))
+                if (squares[row][col] == 'b')
                 {
                     count++;
                 }
@@ -117,7 +117,7 @@ public class Board
             int count = 0;
             for (int row = 0; row < 10; row++)
             {
-                if (squares[row][col].equals("b"))
+                if (squares[row][col] == 'b')
                 {
                     count++;
                 }
@@ -145,14 +145,14 @@ public class Board
         {
             return -1;
         }
-        if (squares[row][col].equals("-"))
+        if (squares[row][col] == '-')
         {
-            squares[row][col] = "m";
+            squares[row][col] = 'm';
             return 0;
         }
-        if (squares[row][col].equals("b"))
+        if (squares[row][col] == 'b')
         {
-            squares[row][col] = "x";
+            squares[row][col] = 'x';
             return 1;
         }
         return 2;
@@ -165,7 +165,7 @@ public class Board
         {
             for (int col = 0; col < 10; col++)
             {
-                if (squares[row][col].equals("b"))
+                if (squares[row][col] == 'b')
                 {
                     return false;
                 }
